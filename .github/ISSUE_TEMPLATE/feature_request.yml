@@ -29,7 +29,6 @@ body:
         - '🚨 Hight '
         - '❕ Normal'
         - '🐭 Tiny'
-
     validations:
       required: true
   - type: textarea
