@@ -20,17 +20,17 @@ body:
     validations:
       required: true
 - type: dropdown
-    id: priority
-    attributes:
-      label: 'Priority'
-      multiple: false
-      options:
+  id: priority
+  attributes:
+    label: 'Priority'
+    multiple: true
+    options:
         - '❗️ Extreme'
         - '🚨 Hight '
         - '❕ Normal'
         - '🐭 Tiny'
-    validations:
-      required: true
+  validations:
+    required: true
   - type: textarea
     id: unresolved_question
     attributes:
