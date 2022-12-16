@@ -25,10 +25,10 @@ body:
       label: 'Priority'
       multiple: false
       options:
-        - ❗️ Extreme
-        - 🚨 Hight 
-        - ❕ Normal
-        - 🐭 Tiny
+        - '❗️ Extreme'
+        - '🚨 Hight '
+        - '❕ Normal'
+        - '🐭 Tiny'
 
     validations:
       required: true
