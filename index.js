@@ -23,6 +23,6 @@ app.use(express.json())
 
 app.use('/api', api)
 
-app.listen(3000, () => {
-  console.log(`Server Started at ${3000}`)
+app.listen(process.env.PORT, () => {
+  console.log(`Server Started at ${process.env.PORT}`)
 })
