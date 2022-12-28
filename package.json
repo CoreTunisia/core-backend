@@ -23,7 +23,10 @@
     "express": "^4.18.2",
     "mongoose": "^6.8.0",
     "nodemon": "^2.0.20",
-    "urllib": "^3.10.0"
+    "urllib": "^3.10.0",
+    "jsonwebtoken": "^8.5.1",
+    "cookie-session": "^1.4.0",
+    "bcryptjs": "^2.4.3"
   },
   "devDependencies": {
     "jest": "^29.3.1",
