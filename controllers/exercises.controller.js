@@ -17,6 +17,7 @@ exports.getAllExerciseCategories = (req, res) => {
 exports.addExercise = (req, res) => {
   const name = req.body.name
   const coach = req.body.coach
+  const category = req.body.category
   const sets = Number(req.body.sets)
   const reps = Number(req.body.reps)
   const rest = Number(req.body.rest)
@@ -30,6 +31,7 @@ exports.addExercise = (req, res) => {
   const newExercise = new Exercise({
     name,
     coach,
+    category,
     sets,
     reps,
     rest,

@@ -5,6 +5,10 @@ const mongoose = require('mongoose')
       required: true,
       type: String,
     },
+    category: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'exerciseCategory',
+    },
     coach: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User',
