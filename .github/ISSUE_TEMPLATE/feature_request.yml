@@ -26,7 +26,7 @@ body:
       multiple: true
       options:
         - '❗️ Extreme'
-        - '🚨 Hight '
+        - '🚨 High'
         - '❕ Normal'
         - '🐭 Tiny'
     validations:
