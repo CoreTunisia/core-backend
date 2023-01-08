@@ -47,3 +47,9 @@ exports.addExercise = (req, res) => {
     .then(() => res.json('Exercise added!'))
     .catch(err => res.status(400).json('Error: ' + err))
 }
+
+exports.deleteExercise = (req, res) => {
+  Exercise.deleteOne({ id: req.params.id })
+    .then(() => res.json('Exercise deleted!'))
+    .catch(err => res.status(400).json('Error: ' + err))
+}

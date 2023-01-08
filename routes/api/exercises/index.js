@@ -8,5 +8,7 @@ router.get('/', controller.getExercises)
 router.post('/', controller.addExercise)
 // get all muscles
 router.get('/muscle/:muscle', controller.getExercisesByMuscle)
+// delete exercise by ID
+router.delete('/:id', controller.deleteExercise)
 
 module.exports = router
