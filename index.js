@@ -3,7 +3,6 @@ require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const mongoString = process.env.DATABASE_URL
-const users = require('./routes/api/users')
 const api = require('./routes/api')
 
 mongoose.connect(mongoString, { dbName: 'CoreDev', useNewUrlParser: true, useUnifiedTopology: true })

@@ -5,6 +5,10 @@ const mongoose = require('mongoose')
       required: true,
       type: String,
     },
+    type: {
+      required: true,
+      type: String, // compound / isolation
+    },
     muscles: [
       {
         type: mongoose.Schema.Types.ObjectId,
