@@ -11,4 +11,4 @@ const Muscle = new mongoose.Schema({
   },
 })
 
-module.exports = mongoose.model('ExerciseCategories', Muscle)
+module.exports = mongoose.model('Muscle', Muscle)

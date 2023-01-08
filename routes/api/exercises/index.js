@@ -7,6 +7,6 @@ router.get('/', controller.getExercises)
 // get all exercises
 router.post('/', controller.addExercise)
 // get all muscles
-router.get('/muscles', controller.getMuscles)
+router.get('/muscle/:muscle', controller.getExercisesByMuscle)
 
 module.exports = router

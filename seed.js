@@ -20,7 +20,7 @@ async function seed() {
   clearExisting()
   setTimeout(() => {
     // Create existing categories
-    const categories = [
+    const muscles = [
       new Muscle({
         name: 'Abs',
         image: 'link.com/identifier',
@@ -55,10 +55,10 @@ async function seed() {
       }),
     ]
     // Save the user to the database
-    categories.forEach(category =>
-      category
+    muscles.forEach(muscle =>
+      muscle
         .save()
-        .then(() => console.log('category added!'))
+        .then(() => console.log('muscle added!'))
         .catch(err => console.error(err)),
     )
   }, 3000)

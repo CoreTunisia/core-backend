@@ -7,10 +7,9 @@ exports.getExercises = (req, res) => {
     .catch(err => res.status(400).json('Error: ' + err))
 }
 
-exports.getMuscles = (req, res) => {
-  muscle
-    .find()
-    .then(muscle => res.json(muscle))
+exports.getExercisesByMuscle = (req, res) => {
+  Exercise.find({ muscles: req.params.muscle })
+    .then(exercises => res.json(exercises))
     .catch(err => res.status(400).json('Error: ' + err))
 }
 
