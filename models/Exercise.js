@@ -5,10 +5,12 @@ const mongoose = require('mongoose')
       required: true,
       type: String,
     },
-    category: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'exerciseCategory',
-    },
+    muscles: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Muscle',
+      },
+    ],
     coach: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User',
@@ -36,10 +38,6 @@ const mongoose = require('mongoose')
     level: {
       required: true,
       type: Number, // 1 2 or 3
-    },
-    muscles: {
-      type: [String],
-      required: true,
     },
     instructions: {
       type: String,

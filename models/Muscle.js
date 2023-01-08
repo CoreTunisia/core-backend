@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const ExerciseCategory = new mongoose.Schema({
+const Muscle = new mongoose.Schema({
   name: {
     required: true,
     type: String,
@@ -11,4 +11,4 @@ const ExerciseCategory = new mongoose.Schema({
   },
 })
 
-module.exports = mongoose.model('ExerciseCategories', ExerciseCategory)
+module.exports = mongoose.model('ExerciseCategories', Muscle)

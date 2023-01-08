@@ -6,7 +6,7 @@ const controller = require('../../../controllers/exercises.controller')
 router.get('/', controller.getExercises)
 // get all exercises
 router.post('/', controller.addExercise)
-// get all exercise categories
-router.get('/categories', controller.getAllExerciseCategories)
+// get all muscles
+router.get('/muscles', controller.getMuscles)
 
 module.exports = router

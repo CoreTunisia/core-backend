@@ -1,5 +1,5 @@
-const Exercise = require('../models/exercise') // Load the Exercise model
-const exerciseCategory = require('../models/exerciseCategory')
+const Exercise = require('../models/Exercise') // Load the Exercise model
+const muscle = require('../models/Muscle')
 
 exports.getExercises = (req, res) => {
   Exercise.find()
@@ -7,10 +7,10 @@ exports.getExercises = (req, res) => {
     .catch(err => res.status(400).json('Error: ' + err))
 }
 
-exports.getAllExerciseCategories = (req, res) => {
-  exerciseCategory
+exports.getMuscles = (req, res) => {
+  muscle
     .find()
-    .then(exerciseCategories => res.json(exerciseCategories))
+    .then(muscle => res.json(muscle))
     .catch(err => res.status(400).json('Error: ' + err))
 }
 
