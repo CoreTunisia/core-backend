@@ -14,8 +14,9 @@ exports.getByMuscle = (req, res) => {
 }
 
 exports.searchByName = (req, res) => {
-  Exercise.find({ muscles: req.params.muscle })
-    .then(exercises => res.json(exercises))
+  const name = req.params.name
+  Exercise.find({ name: { $regex: name, $options: 'i' } })
+    .then(result => res.json(result))
     .catch(err => res.status(400).json('Error: ' + err))
 }
 
