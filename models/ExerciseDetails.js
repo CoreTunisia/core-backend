@@ -1,17 +1,9 @@
 const mongoose = require('mongoose')
 
-const Exercise = new mongoose.Schema({
+const ExerciseDetails = new mongoose.Schema({
   exercise: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Exercise',
-  },
-  coach: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
-  },
-  client: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
   },
   workoutPlan: {
     type: mongoose.Schema.Types.ObjectId,
@@ -39,5 +31,4 @@ const Exercise = new mongoose.Schema({
   },
 })
 
-module.exports = mongoose.model('Exercises', Exercise)
-module.exports = mongoose.model('Exercises', Exercise)
+module.exports = mongoose.model('ExerciseDetails', ExerciseDetails)

@@ -1,11 +1,15 @@
 const express = require('express')
 const router = express.Router()
-const muscle = require('../../models/Muscle')
+
 const users = require('./users')
 const exercises = require('./exercises')
+const exerciseDetails = require('./exerciseDetails')
+
+const muscle = require('../../models/Muscle')
 
 router.use('/users', users)
 router.use('/exercises', exercises)
+router.use('/exerciseDetails', exerciseDetails)
 router.get('/muscles', (req, res) => {
   muscle
     .find()
