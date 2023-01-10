@@ -17,6 +17,9 @@ const dataSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
+  activationCode: {
+    type: String,
+  },
   roles: [
     {
         type: mongoose.Schema.Types.ObjectId,

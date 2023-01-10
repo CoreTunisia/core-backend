@@ -1,11 +1,8 @@
 require('dotenv').config()
-
 const express = require('express')
 const mongoose = require('mongoose')
 const mongoString = process.env.DATABASE_URL
-const users = require('./routes/api/users')
 const Role= require('./models/role')
-
 const api = require('./routes/api')
 const cookieSession = require("cookie-session");
 const { removeListener } = require('./models/user')
@@ -35,8 +32,8 @@ app.use(
     httpOnly: true
   })
 )
-require("./routes/api/users/auth.routes")(app);
-require("./routes/api/users/user.routes")(app);
+
+
 app.use('/api', api)
 
 const PORT = process.env.PORT || 8080
