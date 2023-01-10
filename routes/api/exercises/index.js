@@ -3,12 +3,12 @@ const router = express.Router()
 const controller = require('../../../controllers/exercises.controller')
 
 // get all exercises
-router.get('/', controller.getExercises)
+router.get('/', controller.getAll)
 // get all exercises
-router.post('/', controller.addExercise)
+router.post('/', controller.addNew)
 // get all muscles
-router.get('/muscle/:muscle', controller.getExercisesByMuscle)
+router.get('/muscle/:muscle', controller.getByMuscle)
 // delete exercise by ID
-router.delete('/:id', controller.deleteExercise)
+router.delete('/:id', controller.deleteById)
 
 module.exports = router
