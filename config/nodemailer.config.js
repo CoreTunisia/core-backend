@@ -1,7 +1,7 @@
 const nodemailer = require("nodemailer");
 
-const user = ""; // hedhi t7ot feha l email 
-const pass = ""; // houni lazmek ta3mel generation lel code hedha gmail apps 
+const user = "malek.smaoui@esprit.tn"; // hedhi t7ot feha l email 
+const pass = "baskoula1234"; // houni lazmek ta3mel generation lel code hedha gmail apps 
 
 const transport = nodemailer.createTransport({
   service: "Gmail",
@@ -52,7 +52,7 @@ module.exports.sendResetPasswordEmail = (email, randomCode) => {
       
         <p>reinitialiser votre  mot de passe en cliquant sur le lien suivant
 </p>
-        <a href=http://localhost:3000/reset_password/${randomCode}>Cliquez ici
+        <a href=http://localhost:2727/reset_password/${randomCode}>Cliquez ici
 </a>
 
         </div>`,
@@ -60,21 +60,4 @@ module.exports.sendResetPasswordEmail = (email, randomCode) => {
     .catch((err) => console.log(err));
 };
 
-module.exports.sendWinElectionEMail = (email) => {
-  // transport houwa jesr from chkoun to amal  html body message chnouwa f wostou
-  transport
-    .sendMail({
-      from: user,
-      to: email,
-      subject: "Résultat élection",
-      html: `
-      <div>
-      <h1> Vous avez ganger dans cette élection et vous serez syndic </h1>
-      
-        <p>ous avez ganger dans cette élection et vous serez syndic
-</p>
-      
-        </div>`,
-    })
-    .catch((err) => console.log(err));
-};
+
