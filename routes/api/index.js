@@ -4,6 +4,7 @@ const router = express.Router()
 const users = require('./users')
 const exercises = require('./exercises')
 const exerciseDetails = require('./exerciseDetails')
+process.env.NODE_TLS_REJECT_UNAUTHORIZED='0'
 
 const muscle = require('../../models/Muscle')
 process.env.NODE_TLS_REJECT_UNAUTHORIZED='0'
