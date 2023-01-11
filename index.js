@@ -2,9 +2,9 @@ require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const mongoString = process.env.DATABASE_URL
-const Role= require('./models/role')
+const Role = require('./models/role')
 const api = require('./routes/api')
-const cookieSession = require("cookie-session");
+const cookieSession = require('cookie-session')
 const { removeListener } = require('./models/user')
 mongoose.connect(mongoString, { dbName: 'CoreDev', useNewUrlParser: true, useUnifiedTopology: true })
 
@@ -27,12 +27,11 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use(
   cookieSession({
-    name: "Core-session",
-    secret: "COOKIE_SECRET", // should use as secret environment variable
-    httpOnly: true
-  })
+    name: 'Core-session',
+    secret: 'COOKIE_SECRET', // should use as secret environment variable
+    httpOnly: true,
+  }),
 )
-
 
 app.use('/api', api)
 
@@ -41,40 +40,37 @@ app.listen(PORT, () => {
   console.log(`Server Started at ${process.env.PORT}`)
 })
 
-
-
-
-function initial() {+
-  Role.estimatedDocumentCount((err, count) => {
+function initial() {
+  ;+Role.estimatedDocumentCount((err, count) => {
     if (!err && count === 0) {
       new Role({
-        name: "user"
+        name: 'user',
       }).save(err => {
         if (err) {
-          console.log("error", err);
+          console.log('error', err)
         }
 
-        console.log("added 'user' to roles collection");
+        console.log("added 'user' to roles collection")
       })
 
       new Role({
-        name: "coach"
+        name: 'coach',
       }).save(err => {
         if (err) {
-          console.log("error", err);
+          console.log('error', err)
         }
 
-        console.log("added 'coach' to roles collection");
+        console.log("added 'coach' to roles collection")
       })
 
       new Role({
-        name: "admin"
+        name: 'admin',
       }).save(err => {
         if (err) {
-          console.log("error", err);
+          console.log('error', err)
         }
 
-        console.log("added 'admin' to roles collection");
+        console.log("added 'admin' to roles collection")
       })
     }
   })
