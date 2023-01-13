@@ -15,6 +15,7 @@ const mongoose = require('mongoose')
         ref: 'Muscle',
       },
     ],
+    // TODO: add coach attribute to allow for the coach to add his own exercises and view all default exercises + his own
     level: {
       required: true,
       type: Number, // 1 2 or 3
